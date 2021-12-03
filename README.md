@@ -48,6 +48,6 @@ Before running the Classifier App, you need to:
 
 To run the application:
 
-    ```bash
-    $ poetry run flask run
-    ```
+```bash
+$ poetry run flask run
+```
