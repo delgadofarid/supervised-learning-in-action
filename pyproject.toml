@@ -2,7 +2,7 @@
 name = "app"
 version = "0.1.0"
 description = "Using Deep Learning (CNNs) to differentiate Dogs from Cats"
-authors = ["Farid Delgado <farid.delgado@thomsonreuters.com>"]
+authors = ["Farid Delgado <delgado.farid@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.8"
