@@ -49,9 +49,9 @@ def upload_file():
             animal_tuples = multiple_model_predict(files)
 
             files = [os.path.join('testdata', fname) for fname in filenames]
-            print(files)
+            # print(files)
             file_animal_tuples = list(zip(files, animal_tuples))
-            print(file_animal_tuples)
+            # print(file_animal_tuples)
 
             resp = make_response(render_template('identify.html', file_animal_tuples=file_animal_tuples))
             return resp
