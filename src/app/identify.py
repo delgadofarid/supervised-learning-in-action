@@ -1,4 +1,4 @@
-import os
+from typing import Tuple
 import numpy as np
 from tensorflow import keras
 
@@ -7,13 +7,19 @@ img_dimensions = 32, 32
 seq_model.metrics_names
 
 
-def translate_pred(prediction: np.array) -> str:
+def translate_pred(prediction: np.array) -> Tuple[str, float]:
+    """Input prediction's shape: array([[X]], dtype=float32).
+    
+    Output examples:
+        - ("Dog", 70.8)
+        - ("Cat", 90.2)
+    """
     if prediction[0][0] > 0.5:
         return "Dog", prediction[0][0] * 100
     else:
         return "Cat", (1 - prediction[0][0]) * 100
 
-def model_predict(image_uri: str):
+def model_predict(image_uri: str) -> Tuple[str, float]:
     import numpy as np
     from keras.preprocessing.image import load_img, img_to_array, ImageDataGenerator
     
