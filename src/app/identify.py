@@ -21,7 +21,8 @@ def translate_pred(prediction: np.array) -> Tuple[str, float]:
 
 def model_predict(image_uri: str) -> Tuple[str, float]:
     import numpy as np
-    from keras.preprocessing.image import load_img, img_to_array, ImageDataGenerator
+    from keras.preprocessing.image import ImageDataGenerator
+    from tensorflow.keras.utils import load_img, img_to_array
     
     #load the image
     img_width, img_height = img_dimensions
